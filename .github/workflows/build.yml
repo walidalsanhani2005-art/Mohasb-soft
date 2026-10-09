@@ -12,9 +12,11 @@ jobs:
           channel: 'stable'
       - run: |
           mv lib lib_backup
-          flutter create . --project-name mohasb_soft --platforms android
-          rm -rf lib
+          cp pubspec.yaml pubspec_backup.yaml
+          flutter create . --project-name mohasb_soft --platforms android --org com.example
+          rm -rf lib android
           mv lib_backup lib
+          mv pubspec_backup.yaml pubspec.yaml
       - run: flutter pub get
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
