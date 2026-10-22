@@ -1,7 +1,8 @@
+
 name: mohasb_soft
-description: تطبيق المحاسب سوفت للمحاسبة
+description: Mohasb Soft 2.0 General Accounting
 publish_to: 'none'
-version: 1.0.0+1
+version: 2.0.0+2
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -9,6 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  intl: ^0.19.0
   cupertino_icons: ^1.0.2
 
 flutter:
